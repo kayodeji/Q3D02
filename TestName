@@ -1,0 +1,25 @@
+import java.util.Scanner; 
+
+public class TestName
+{
+	public static void main(String[] args)
+	{
+		Scanner in = new Scanner(System.in)
+		System.out.println("Enter your full name: ");
+		String s = in.next();
+		Fullname f = new Fullname(s);
+
+		if (f.hasMiddleName())
+		{
+			System.out.println(f.getFirst() + " has a middle name.");
+		}
+		else
+		{
+			System.out.println(f.getFirst() + " has NO middle name.");
+			f.updateMiddle("-");
+		}
+		System.out.println(f.getFirst() + " " + getLast() + " has the initials of " + getInitials());
+
+	}
+
+}
